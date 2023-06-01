@@ -1,0 +1,53 @@
+/* Base */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --Laranja: #FF9900;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Error menssage class */
+.redAlert{
+    color: red;
+}
+.greenAlert{
+    color: green;
+}
+.showAlert{
+    visibility: visible;
+}
+.hideAlert{
+    visibility: hidden;
+}
+/* Color change class -- alterar para melhor funcionamento*/
+.darkMode {
+    color: #fff;
+    background-color: black;
+}
+
+.whiteMode {
+    color: black;
+    background-color: #fff;
+}
+
+/* Index class */
+.show {
+    z-index: 2;
+}
+
+.hide {
+    z-index: -2;
+}
