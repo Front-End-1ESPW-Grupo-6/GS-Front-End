@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FoodLink</title>
+    <link rel="shortcut icon"
+    href="./Imgs/Logo.png"
+    type="image/x-icon">
+    <link rel="stylesheet" href="./Css/login.css">
+    <!-- <script src="./Js/login.js"></script> -->
 </head>
 <body>
-    
+    <main class="base">
+        <div class="loginContainer">
+            <h1 class="loginTitle">login</h1>
+            <form class="formulario">
+                <div class="alert">Alerta!</div>
+                <label for="email" class="loginInputs">
+                    <span>Email ou CNPJ</span>
+                    <input class="input" type="text" name="email" id="email-Login-Input" placeholder="Nome@email.com">
+                </label>
+                <label for="senha" class="loginInputs">
+                    <span>Senha</span>
+                    <input class="input" type="password" name="password" id="pass-Login-Input">
+                </label>
+                <button class="login-submit-btn">Entrar</button>
+            </form>
+            <div>
+                <p>Nao possui uma conta?</br><a href="#">Cadastre-se</a></p>
+            </div>
+            <div>
+                <a href="#">Voltar a página inicial</a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
