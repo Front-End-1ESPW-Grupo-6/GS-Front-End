@@ -55,10 +55,11 @@ header{
     width: 100%;
     height: 7%;
     opacity: 100%;
+    z-index: 1;
   }
 
   .navbar-logo{
-    width: 5%;
+    width: 4.5%;
     margin-right: auto;
     z-index: 2;
   }
@@ -190,7 +191,7 @@ header{
 .servicos-container {
     height: auto;
     margin: 0 auto;
-    padding-top: 1em;
+    padding-top: 7em;
     display: flex;
 }
 
@@ -216,7 +217,8 @@ header{
   }
 
   .servicos-image img{
-    
+    width: 90%;
+    box-shadow: -25px 25px 1px #FF9900;
   }
 /* Fim Serviços */
 
@@ -224,8 +226,21 @@ header{
 .impactos-container {
   min-height: 60vh;
   margin: 0 auto;
-  padding-top: 1em;
+  padding-top: 7em;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.impactos-title{
+  font-size: 4.5em;
+  font-weight: 800;
+  color: #FF9900;
+  text-shadow: 2px 2px black;
+  display: inline-block;
+  flex-basis: 100%;
+  text-align: center;
 }
 
 .impactos-text{
@@ -234,25 +249,138 @@ header{
   color: #706F6F;
   font-size: 2em;
   padding-left: 2em;
-}
-
-.impactos-text p:first-child{
-  font-size: 2.5em;
-  font-weight: 800;
-  color: #FF9900;
-  text-shadow: 2px 2px black;
+  flex-basis: 45%;
+  box-shadow: -25px -25px 1px #D9D9D9;
 }
 
 .impactos-image{
   padding: 2em 0 0 0;
   justify-content: center;
   display: flex;
+  flex-basis: 50%;
 }
 
 .impactos-image img{
-  max-width: 70%;
-  max-height: 70%;
-  width: auto;
-  height: auto;
+  width: 80%;
+  box-shadow: 25px 25px 1px #FF9900;
 }
 /* Fim impactos */
+
+/* Inicio sobre-nos */
+.sobre-container {
+  min-height: 60vh;
+  margin: 0 auto;
+  padding-top: 7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.sobre-title{
+  font-size: 4.5em;
+  font-weight: 800;
+  color: #FF9900;
+  text-shadow: 2px 2px black;
+  display: inline-block;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.sobre-text{
+  width: 60%;
+  text-align: center;
+  color: #706F6F;
+  font-size: 2em;
+  padding-left: 2em;
+  flex-basis: 48%;
+}
+
+.sobre-image{
+  padding: 2em 0 0 0;
+  justify-content: center;
+  display: flex;
+  flex-basis: 50%;
+}
+
+.sobre-image img{
+  width: 80%;
+  box-shadow: -25px -25px 1px #FF9900;
+}
+/* Fim sobre-nos */
+
+/* Inicio Contato */
+.contato-container{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 7em;
+  flex-wrap: wrap;
+}
+
+.contato-header{
+  position: absolute;
+  text-align: center;
+  padding-bottom: 12em;
+  flex-basis: 100%;
+}
+
+.contato-header a:first-child{
+  font-weight: 800;
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 3px 3px black;
+}
+
+.underline-contato-header {     
+  width: 950px;     
+  height: 0px;     
+  border: 2px solid #fff;   
+  margin-left: 40px;
+
+}
+
+.contato-header a:nth-child(3){
+  font-weight: 800;
+  font-size: 1.4em;
+  padding-bottom: -30px;
+  color: #fff;
+  text-shadow: 3px 3px black;
+}
+
+.cards{
+  display: flex;
+  gap: 250px;
+  position: absolute;
+  padding-top: 40em;
+  align-items: center;
+  justify-content: center;
+}
+
+.card1{
+  width: 367px;
+  height: 450px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 15px 15px 30px #bebebe;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0 0 9.5em;
+}
+
+.card2{
+  width: 367px;
+  height: 450px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 15px 15px 30px #bebebe;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0 0 9.5em;
+}
+
+.cards img{
+  width: 30%;
+}
+
+/* Fim contato */
