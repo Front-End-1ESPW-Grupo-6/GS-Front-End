@@ -28,11 +28,11 @@ body {
     height: 100%;
     background-image: url(../Imgs/2c8f0d64-46c8-4b19-affb-9cb99f9c3393.jpg);
     min-height: 100vh;
-    max-height: 100vh;
 }
-
+/* Start login area */
 .loginContainer {
     display: flex;
+    visibility: visible;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -51,36 +51,43 @@ body {
     color: #FF9900;
     text-shadow: 2px 2px black;
 }
-
-.formulario {
+.loginForm {
     display: flex;
     flex-direction: column;
 }
-
-.loginInputs {
-    display: flex;
-    flex-direction: column;
+.loginAlert {
+    font-size: 1.2em;
+    font-weight: 800;
+    padding: 1em 0;
+}
+.loginInputName{
+    font-weight: 700;
     text-align: start;
-    font-weight: bold;
+    padding-left: 0.5em;
 }
-
-.input {
+.loginInputs {
+    position: relative;
+}
+#eyePasslogin{
+    position: absolute;
+    width: 1.5em;
+    bottom: 2%;
+    right: 3%;
+    cursor: pointer;
+}
+.loginInput {
     background-color: #fff;
     border: 2px solid #FF9900;
     border-radius: 21px;
     width: 100%;
+    font-weight: 800;
     height: 2em;
     padding: 0.5em;
 }
-
-.alert {
-    font-size: 1.5em;
-    font-weight: 800;
-    color: #ff0000;
-    padding: 1em 0;
+.logininput::placeholder {
+    color: rgba(0, 0, 0, 0.288) ;
 }
-
-.login-submit-btn {
+.loginSubmitBtn {
     color: #fff;
     font-weight: 900;
     font-size: 2em;
@@ -90,14 +97,240 @@ body {
     margin: 1em auto;
     border: none;
 }
+.redirectSignup{
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+.redirectSignup span{
+    text-decoration: none;
+    color: #FF9900;
+    text-shadow: 2px 2px black;
+    cursor: pointer;
+}
+.loginRedirectHome{
+    display: flex;
+    justify-content: center;
+}
+.loginRedirectHome a{
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+/* End login area */
+/* Inicio cadastro usuario */
+.signupContainer {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(217, 217, 217, 0.85);
+    border-radius: 50px;
+    height: 40em;
+    width: 24em;
+    padding: 2em;
+}
 
+.signupTitle {
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #FF9900;
+    text-shadow: 2px 2px black;
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+}
+.signupAlert {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: #ff0000;
+    padding: 0.5em 0;
+}
+.signupInputName{
+    font-weight: 700;
+    text-align: start;
+    padding-left: 0.5em;
+}
+
+.signupInputs {
+    position: relative;
+}
+#eyePassSignup{
+    position: absolute;
+    width: 1.5em;
+    bottom: 2%;
+    right: 3%;
+    cursor: pointer;
+}
+#eyePassSignupConfirm{
+    position: absolute;
+    width: 1.5em;
+    bottom: 2%;
+    right: 3%;
+    cursor: pointer;
+}
+.signupInput {
+    background-color: #fff;
+    border: 2px solid #FF9900;
+    border-radius: 21px;
+    width: 100%;
+    font-weight: 800;
+    height: 2em;
+    padding: 0.5em;
+}
+.signupInput::placeholder {
+    color: rgba(0, 0, 0, 0.288) ;
+}
+.passMin{
+    font-size: 0.7em;
+    font-weight: 600;
+    text-align: start;
+    padding-left: 0.8em;
+}
+.signupSubmitBtn {
+    color: #fff;
+    font-weight: 900;
+    font-size: 2em;
+    padding: 0 2em;
+    background: #FF9900;
+    border-radius: 50px;
+    margin: 0.5em auto;
+    border: none;
+}
+.redirectOngSignup,
+.redirectLogin{
+    font-weight: 700;
+    padding-bottom: 1em;
+}
+.redirectOngSignup span,
+.redirectLogin span{
+    text-decoration: none;
+    color: #FF9900;
+    cursor: pointer;
+    text-shadow: 2px 2px black;
+}
+.singupRedirectHome{
+    display: flex;
+    justify-content: center;
+}
+.singupRedirectHome a{
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+/* Fim cadastro usuario */
+/* Inicio cadastro ONG */
+.signupOngContainer {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(217, 217, 217, 0.85);
+    border-radius: 50px;
+    height: 44em;
+    width: 24em;
+    padding: 2em;
+}
+
+.signupOngTitle {
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #FF9900;
+    text-shadow: 2px 2px black;
+}
+
+.signupOngForm {
+    display: flex;
+    flex-direction: column;
+}
+.signupOngAlert {
+    font-size: 1.5em;
+    font-weight: 800;
+    padding: 0.5em 0;
+}
+.signupOngInputName{
+    font-weight: 700;
+    text-align: start;
+    padding-left: 0.5em;
+}
+
+.signupOngInputs {
+    position: relative;
+}
+#eyePassOngSignup{
+    position: absolute;
+    width: 1.5em;
+    bottom: 2%;
+    right: 3%;
+    cursor: pointer;
+}
+#eyePassOngSignupConfirm{
+    position: absolute;
+    width: 1.5em;
+    bottom: 2%;
+    right: 3%;
+    cursor: pointer;
+}
+.signupOngInput {
+    background-color: #fff;
+    border: 2px solid #FF9900;
+    border-radius: 21px;
+    width: 100%;
+    font-weight: 800;
+    height: 2em;
+    padding: 0.5em;
+}
+.signupOngInput::placeholder {
+    color: rgba(0, 0, 0, 0.288) ;
+}
+.signupOngSubmitBtn {
+    color: #fff;
+    font-weight: 900;
+    font-size: 2em;
+    padding: 0 2em;
+    background: #FF9900;
+    border-radius: 50px;
+    margin: 0.5em auto;
+    border: none;
+}
+.redirectLoginOng,
+.redirectSignup-Ong{
+    font-weight: 700;
+    padding-bottom: 0.5em;
+}
+.redirectLoginOng span,
+.redirectSignup-Ong span{
+    text-decoration: none;
+    color: #FF9900;
+    text-shadow: 2px 2px black;
+    cursor: pointer;
+}
+.ongRedirectHome{
+    display: flex;
+    justify-content: center;
+}
+.ongRedirectHome a{
+    text-decoration: none;
+    font-weight: 700;
+    color: black;
+}
+/* Fim Cadastro ONG */
 /* Error menssage class */
 .redAlert {
     color: red;
 }
 
 .greenAlert {
-    color: green;
+    color: rgb(44, 212, 44);
 }
 
 .showAlert {
@@ -121,9 +354,9 @@ body {
 
 /* Index class */
 .show {
-    z-index: 2;
+    visibility: visible;
 }
 
 .hide {
-    z-index: -2;
+    visibility: hidden;
 }
