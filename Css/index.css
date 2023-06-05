@@ -61,12 +61,16 @@ header{
   .navbar-logo{
     width: 4.5%;
     margin-right: auto;
-    z-index: 2;
   }
 
   .nav-links {
     display: flex;
     padding: 0;
+    margin-right: em;
+  }
+
+  .nav-links :nth-child(7){
+    margin-left: 29em;
   }
 
   .nav-links li {
@@ -193,14 +197,86 @@ header{
     margin: 0 auto;
     padding-top: 7em;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.servicos-text{
-    width: 60%;
-    text-align: center;
-    color: #706F6F;
-    font-size: 2em;
-    padding-right: 2em;
+.servicos-title{
+  font-size: 4.5em;
+  font-weight: 800;
+  color: #FF9900;
+  text-shadow: 2px 2px black;
+  display: inline-block;
+  flex-basis: 100%;
+  text-align: center;
+}
+.servicos-cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 75px;
+  padding: 1.5em 0 0 0;
+}
+
+.servicos-card {
+  background-color: #e0e0e0;
+  padding: 20px;
+}
+
+.servicos-card:nth-child(-n+2) {
+  grid-row: 1;
+}
+
+.servicos-card:nth-child(n+3) {
+  grid-row: 2;
+}
+
+.servicos-card{
+  width: 320px;
+  height: 400px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 15px 15px 30px #bebebe;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.servicos-card{
+  width: 367px;
+  height: 375px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 15px 15px 30px #bebebe;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0 0 0;
+  flex-wrap: wrap;
+}
+
+.servicos-img{
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+}
+
+.servicos-img img{
+  width: 20%;
+}
+
+.servicos-card-text{
+  text-align: center;
+  color: #706F6F;
+  font-size: 1em;
+  display: inline-block;
+}
+
+.servicos-card-text p:first-child{
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #FF9900;
+  text-shadow: 2px 2px black;
 }
 
 .servicos-text p:first-child{
@@ -211,13 +287,15 @@ header{
   }
 
   .servicos-image{
-    padding: 2em 5em 0 2em;
+    padding: 8em 5em 0 0;
     justify-content: center;
     display: flex;
+    flex-basis: 50%;
   }
 
   .servicos-image img{
     width: 90%;
+    height: 65%;
     box-shadow: -25px 25px 1px #FF9900;
   }
 /* Fim Serviços */
@@ -309,6 +387,104 @@ header{
 }
 /* Fim sobre-nos */
 
+/* Inicio Equipe */
+
+.equipe-container {
+  width: auto;
+  height: 89vh;
+  margin: 0 auto;
+}
+
+.equipe-title {
+  font-size: 4em;
+  text-align: center;
+  color: #FF9900;
+  font-weight: bold;
+  padding-top: 2em;
+}
+
+.equipe-section {
+  display: flex;
+  min-height: 75%;
+  align-items: center;
+  justify-content: center;
+}
+
+.equipe-card-container {
+  display: flex;
+  gap: 1.875em;
+  width: 100%;
+  justify-content: center;
+}
+
+.equipe-card {
+  position: relative;
+  list-style: none;
+  width: 13.75em;
+  transition: .3s ease;
+}
+
+.equipe-card::before {
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.equipe-card-background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  border-radius: 1.25em;
+  background-size: 21.875em;
+  background-position: center;
+  filter: brightness(.9) saturate(1) contrast(1);
+  transform-origin: bottom;
+  transform: scale(1) translateZ(0);
+  transition: .3s ease;
+}
+
+.equipe-card:hover .equipe-card-background {
+  transform: scale(1.15) translateZ(0);
+  background-size: 16.25em;
+}
+
+.equipe-card-container:hover .equipe-equipe-card:not(:hover) {
+  transform: scale(.9);
+}
+
+.equipe-card-container:hover>.equipe-card:not(:hover) .equipe-card-background,
+.equipe-card-container:hover>.equipe-card:not(:hover) .equipe-card-category {
+  filter: brightness(.5) saturate(0) contrast(1.2) blur(1.25em);
+}
+
+.equipe-content {
+  top: 50%;
+  left: 0;
+  padding: 1.5625em;
+  position: absolute;
+}
+
+.equipe-card-category {
+  color: #ffffff;
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.3125em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+.equipe-card-heading {
+  color: #ffffff;
+  font-size: 1.5625em;
+  line-height: 1;
+  text-shadow: 0.125em 0.125em 1.25em rgba(0, 0, 0, .2);
+}
+
+/* Fim Equipe */
+
 /* Inicio Contato */
 .contato-container{
   align-items: center;
@@ -316,6 +492,7 @@ header{
   justify-content: center;
   padding-top: 7em;
   flex-wrap: wrap;
+  padding: 7em 0 24em 0;
 }
 
 .contato-header{
@@ -353,34 +530,83 @@ header{
   gap: 250px;
   position: absolute;
   padding-top: 40em;
+}
+
+.sobre-card{
+  width: 367px;
+  height: 400px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 15px 15px 30px #bebebe;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0 0 0;
+  flex-wrap: wrap;
+}
+
+.sobre-img{
+  flex-basis: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 65px;
+  height: 65px;
 }
 
-.card1{
-  width: 367px;
-  height: 450px;
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 15px 15px 30px #bebebe;
-  display: flex;
-  justify-content: center;
-  padding: 1em 0 0 9.5em;
+.sobre-img img{
+  width: 20%;
 }
 
-.card2{
-  width: 367px;
-  height: 450px;
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 15px 15px 30px #bebebe;
-  display: flex;
-  justify-content: center;
-  padding: 1em 0 0 9.5em;
+.card-text{
+  text-align: center;
+  color: #706F6F;
+  font-size: 1em;
+  display: inline-block;
 }
 
-.cards img{
-  width: 30%;
+.card-text p:first-child{
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #FF9900;
+  text-shadow: 2px 2px black;
+}
+
+.button-card {
+  position: relative;
+  background-color: #D9D9D9;
+  border: none;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  color: #757373;
+  font-size: 1em;
+  font-weight: 700;
+  border-radius: 2em;
+}
+
+.button-card:hover{
+ background:#FF9900;
+ box-shadow:0px 2px 10px 5px #97B1BF;
+ color:#fff;
+}
+
+.button-card:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
 }
 
 /* Fim contato */
+
+/* Inicio rodape */
+footer{
+  width: 1864px;
+  height: 104px;
+  background-color: #555555;
+}
+/* Fim rodape */

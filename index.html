@@ -22,14 +22,15 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#impactos">Impactos</a></li>
-                    <li><a href="#progresso">Progresso</a></li>
                     <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
                     <li><a href="#contato">Contato</a></li>
+                    <li><a href="./login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
-        <img src="./Imgs/Home-img.png" alt="Header image">
-        <div class="header-text" id="home">
+        <img src="./Imgs/Home-img.png" alt="Header image" id="home">
+        <div class="header-text">
             <a>FoodLink</a>
             <br/>
             <div class="underline-header"></div>
@@ -55,14 +56,35 @@
 
     <!-- Inicio Serviços -->
     <article class="servicos-container" id="servicos">
-        
+        <div class="impactos-title">Serviços</div>
         <figure class="servicos-image">
             <img src="./Imgs/servicos-img.jpg" alt="Imagem de doação de alimento">
         </figure>
-        <div class="servicos-text">
-            <p>Serviços</p>
-            <p>Junte-se à GaloTech Food. Ampliaremos o impacto e promoveremos soluções inovadoras para garantir segurança alimentar para todos na luta contra a fome.</p>
-            <p>Nossa expertise em coleta de dados e distribuição de informações fortalecerá nossos esforços conjuntos. Junte-se a nós agora!</p>
+        <div class="servicos-cards">
+
+            <div class="servicos-card">
+                <div class="servicos-card-text">
+                    <p>Ia generativa</p>
+                </div>
+            </div>
+
+            <div class="servicos-card">
+                <div class="servicos-card-text">
+                    <p>Análise de dados</p>
+                </div>
+            </div>
+
+            <div class="servicos-card">
+                <div class="servicos-card-text">
+                    <p>Apresentação de resultados</p>
+                </div>
+            </div>
+
+            <div class="servicos-card">
+                <div class="servicos-card-text">
+                    <p>Captação das ONGs</p>
+                </div>
+            </div>
         </div>
     </article>
     <!-- Fim Serviços -->
@@ -93,9 +115,64 @@
     </article>
     <!-- Fim sobre-nos -->
 
+    <!-- Inicio Equipe -->
+    <div class="equipe-container" id="equipe">
+        <p class="equipe-title">Nossa equipe</p>
+        <section class="equipe-section">
+            <div class="equipe-card-container">
+
+                <div class="equipe-card">
+                    <div class="equipe-card-background" style="background-image: url(./Imgs/time/Fabricio.jpeg);">
+                    </div>
+                    <div class="equipe-content">
+                        <div class="equipe-card-category">RM 97631</div>
+                        <h3 class="equipe-card-heading">Fabrício Saavedra</h3>
+                    </div>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-card-background"
+                        style="background-image: url(./Imgs/time/Guilherme\ A.jpg);"></div>
+                    <div class="equipe-content">
+                        <div class="equipe-card-category">RM 98582</div>
+                        <h3 class="equipe-card-heading">Guilherme Akio</h3>
+                    </div>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-card-background"
+                        style="background-image: url(./Imgs/time/Guilherme\ M.png);"></div>
+                    <div class="equipe-content">
+                        <div class="equipe-card-category">RM 551981</div>
+                        <h3 class="equipe-card-heading">Guilherme Morais</h3>
+                    </div>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-card-background" style="background-image: url(./Imgs/time/Matheus.png);">
+                    </div>
+                    <div class="equipe-content">
+                        <div class="equipe-card-category">RM 550352</div>
+                        <h3 class="equipe-card-heading">Matheus Motta</h3>
+                    </div>
+                </div>
+
+                <div class="equipe-card">
+                    <div class="equipe-card-background" style="background-image: url(./Imgs/time/Vinicius.jpeg);">
+                    </div>
+                    <div class="equipe-content">
+                        <div class="equipe-card-category">RM 99125</div>
+                        <h3 class="equipe-card-heading">Vinicius Buzato</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Fim Equipe -->
+
     <!-- Inicio Contato -->
-    <article class="contato-container" id="Contato">
-        <figure><img src="./Imgs/contato-img.png" alt="Header image"></figure>
+    <article class="contato-container">
+        <figure><img src="./Imgs/contato-img.png" alt="Header image" id="contato"></figure>
         <div class="contato-header" id="home">
             <a>Entre em contato</a>
             <br/>
@@ -104,15 +181,29 @@
             <div class="underline-contato-header"></div>
         </div>
         <div class="cards">
-            <div class="card1">
-                <figure><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
-                <div class="card-text">la</div>
+            <div class="sobre-card">
+                <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
+                <div class="card-text">
+                    <p>Contato via WhatsApp</p>
+                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em dias úteis</p>
+                </div>
+                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique aqui</button>
             </div>
-            <div class="card2">
-                <figure><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
+            <div class="sobre-card">
+                <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
+                <div class="card-text">
+                    <p>Contato via Email</p>
+                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em dias úteis</p>
+                </div>
+                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique aqui</button>
             </div>
         </div>
     </article>
     <!-- Fim contato -->
+
+    <!-- Inicio rodape -->
+    <footer>
+    </footer>
+    <!-- Fim rodape -->
 </body>
 </html>
