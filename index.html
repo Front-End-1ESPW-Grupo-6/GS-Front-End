@@ -7,9 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodLink</title>
     <link rel="shortcut icon" href="./Imgs/Clean-logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="./Js/index.js" defer></script>
     <link rel="stylesheet" href="./Css/index.css">
-    <!-- <script src="https://kit.fontawesome.com/bfb4213bb3.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
 
 <body>
@@ -17,31 +21,62 @@
     <header>
         <nav class="nav-bar">
             <img class="navbar-logo" src="./Imgs/Logo.png" alt="Logo da empresa">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#impactos">Impactos</a></li>
-                    <li><a href="#sobre">Sobre nós</a></li>
-                    <li><a href="#equipe">Equipe</a></li>
-                    <li><a href="#contato">Contato</a></li>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#impactos">Impactos</a></li>
+                <li><a href="#sobre">Sobre nós</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="./area-de-usuario.html">Contato</a></li>
+            </ul>
+            <ul class="nav-links">
+                <li><a id="login" href="./login.html">Login</a></li>
+                <ul class="loginBar" id="slide">
+                    <li><a href="javascript:void(0);" id="loginBar">Pagina Inicial</a></li>
+                    <li><a href="javascript:void(0);" id="loginBar">Contribuir</a></li>
+                    <li><a href="javascript:void(0);" id="loginBar">Desconectar</a></li>
                 </ul>
-                <ul class="nav-links">
-                    <li><a href="./login.html">Login</a></li>
-                </ul>
+            </ul>
         </nav>
-        <figure class="header">
-            <img src="./Imgs/Home-img.png" alt="Header image">
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="header-text">
-                <a>FoodLink</a>
+                <p>FoodLink</p>
                 <div class="underline-header"></div>
-                <a>Dados que saciam a fome</a>
+                <p>Dados que saciam a fome</p>
             </div>
-        </figure>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Imgs/Home-img.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Imgs/kraft_heinz_edit.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Imgs/fiap_edit.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </header>
     <!-- Fim navbar -->
 
     <!-- Inicio home -->
-    <article class="home-container">
+    <article class="home-container" id="home">
         <div class="home-text">
             <p>Home</p>
             <p>Junte-se à GaloTech Food. Ampliaremos o impacto e promoveremos soluções inovadoras para garantir
@@ -68,19 +103,19 @@
                         <p>Ia generativa</p>
                     </div>
                 </div>
-    
+
                 <div class="servicos-card">
                     <div class="servicos-card-text">
                         <p>Análise de dados</p>
                     </div>
                 </div>
-    
+
                 <div class="servicos-card">
                     <div class="servicos-card-text">
                         <p>Apresentação de resultados</p>
                     </div>
                 </div>
-    
+
                 <div class="servicos-card">
                     <div class="servicos-card-text">
                         <p>Captação das ONGs</p>
@@ -88,7 +123,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
     <!-- Fim Serviços -->
 
@@ -176,43 +211,43 @@
         </section>
     </div>
     <!-- Fim Equipe -->
-
-    <!-- Inicio Contato -->
-    <article class="contato-container">
-        <figure><img src="./Imgs/contato-img.png" alt="Header image" id="contato"></figure>
-        <div class="contato-header" id="home">
-            <a>Entre em contato</a>
-            <br />
-            <a>Quer entrar em contato? Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</a>
-            <br />
-            <div class="underline-contato-header"></div>
-        </div>
-        <div class="cards">
-            <div class="sobre-card">
-                <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
-                <div class="card-text">
-                    <p>Contato via WhatsApp</p>
-                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em
-                        dias úteis</p>
-                </div>
-                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique
-                    aqui</button>
-            </div>
-            <div class="sobre-card">
-                <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
-                <div class="card-text">
-                    <p>Contato via Email</p>
-                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em
-                        dias úteis</p>
-                </div>
-                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique
-                    aqui</button>
-            </div>
-        </div>
-    </article>
-    <!-- Fim contato -->
-
     <!-- Inicio rodape -->
+    <!-- Inicio Contato -->
+    <div class="contato-container">
+        <div class="innerContato-container">
+            <img src="./Imgs/contato-img.png" alt="Header image" id="contato">
+            <div class="contato-header">
+                <p>Entre em contato</p>
+                <p>Quer entrar em contato? Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</p>
+                <div class="underline-contato-header"></div>
+            </div>
+            <div class="cards">
+                <div class="sobre-card">
+                    <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
+                    <div class="card-text">
+                        <p>Contato via WhatsApp</p>
+                        <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas
+                            em
+                            dias úteis</p>
+                    </div>
+                    <button class="button-card" onclick="window.location.href='https://wa.me/+5511963752185'">Clique
+                        aqui</button>
+                </div>
+                <div class="sobre-card">
+                    <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
+                    <div class="card-text">
+                        <p>Contato via Email</p>
+                        <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas
+                            em
+                            dias úteis</p>
+                    </div>
+                    <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique
+                        aqui</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim contato -->
     <footer>
     </footer>
     <!-- Fim rodape -->

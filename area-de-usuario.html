@@ -1,38 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodLink</title>
-    <link rel="shortcut icon"
-    href="./Imgs/Clean-logo.png"
-    type="image/x-icon">
+    <link rel="shortcut icon" href="./Imgs/Clean-logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Css/area-de-usuario.css">
-    <script src="https://kit.fontawesome.com/bfb4213bb3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
+
 <body>
     <!-- Inicio navbar -->
     <header>
-        <div class="nav-bar">
+        <nav class="nav-bar">
             <img class="navbar-logo" src="./Imgs/Logo.png" alt="Logo da empresa">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#food">FoodLink</a></li>
-                    <li><a href="#atuacao">Atuação</a></li>
-                    <li><a href="#projeto">Projeto</a></li>
-                    <li><a href="#resultados">Resultados</a></li>
-                    <li><a href="./index.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-        <img src="./Imgs/Home-img.png" alt="Header image" id="food">
-        <div class="header-text">
-            <a>Bem vindo</a>
-            <br/>
-            <a>Admin</a>
-            <div class="underline-header"></div>
+            <ul class="nav-links">
+                <li><a href="#food">FoodLink</a></li>
+                <li><a href="#atuacao">Atuação</a></li>
+                <li><a href="#contribuicao">Contribuição</a></li>
+                <li><a href="#mapa">Mapa da fome</a></li>
+                <li><a href="./index.html">Contato</a></li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="./login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="header-text">
+                <p>ADMIN</p>
+                <p>Bem vindo de volta</p>
+                <div class="underline-header"></div>
+            </div>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Imgs/Home-img.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./Imgs/kraft_heinz_edit.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Imgs/fiap_edit.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </header>
     <!-- Fim navbar -->
@@ -41,22 +72,41 @@
     <article class="foodlink-container">
         <div class="foodlink-title">FoodLink</div>
         <div class="foodlink-text">
-            <p>Esta area é definida para o uso do programa tanto de ongs quanto de usuarios, futuramente esta pagina pretende ser personalizada para uso apenas de ongs ou apenas de usuarios</p>
+            <p>Esta area é definida para o uso do programa tanto de ongs quanto de usuarios, futuramente esta pagina
+                pretende ser personalizada para uso apenas de ongs ou apenas de usuarios</p>
         </div>
     </article>
     <!-- Fim foodlink -->
+
+    <!-- Inicio mapa da fome -->
+    <article class="mapa-container" id="mapa">
+        <div class="mapa-title">Mapa da fome</div>
+        <figure class="mapa-image">
+            <img src="./Imgs/mapa_fome.png" alt="LOGO">
+        </figure>
+        <div class="mapa-text">
+            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções
+                inovadoras.</p>
+            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções
+                inovadoras.</p>
+        </div>
+        <figure class="mapa2-image">
+            <img src="./Imgs/grafico_regiao.png" alt="LOGO">
+        </figure>
+    </article>
+    <!-- Fim mapa da fome -->
 
     <!-- Inicio atuacao -->
     <article class="atuacao-container" id="atuacao">
         <div class="atuacao-title">Atuação</div>
         <figure class="atuacao-image">
-            <img src="./Imgs/map.png" alt="LOGO">
+            <img src="./Imgs/alagoas.png" alt="LOGO">
         </figure>
         <div class="atuacao-text">
             <p>Populaçao: 56,7 milhões </p>
             <p>Mais de x% passam fome</p>
             <p>Nivel de fome: 3</p>
-            <br/>
+            <br />
             <p>Esta area esta em grande carencia alimentar</p>
             <p>Para suprir seriam necessarios:</p>
             <p>40kg de alimento por dia</p>
@@ -65,60 +115,74 @@
             <p>Pretende doar alimentos para essa area?</p>
             <button class="atuacao-button" onclick="window.location.href='https://www.youtube.com'">Contribuir</button>
         </div>
+        <figure class="atuacao-image">
+            <img src="./Imgs/grafico_estado.png" alt="LOGO">
+        </figure>
     </article>
     <!-- Fim atuacao -->
 
     <!-- Inicio contribuicao -->
-    <article class="sobre-container" id="contribuicao">
-        <div class="sobre-title">Contribuição</div>
-        <div class="sobre-text">
-            <p>A sua ajuda é muito importante para a causa, nao fornecemos ajuda diretamente as pessoas  mas ajudamos a sua instituição a chegar onde mais precisam, e para isso recolhemos essa informação para ajudar a sempre melhorar o nosso sistema</p>
+    <article class="contribuicao-container" id="contribuicao">
+        <div class="contribuicao-title">Contribuição</div>
+        <div class="contribuicao-text">
+            <p>A sua ajuda é muito importante para a causa, nao fornecemos ajuda diretamente as pessoas mas ajudamos a
+                sua instituição a chegar onde mais precisam, e para isso recolhemos essa informação para ajudar a sempre
+                melhorar o nosso sistema</p>
         </div>
         <div class="contribuicao-panel">
-            <button class="contribuicao-button" onclick="window.location.href='https://www.youtube.com'">10kg/dia</button>
-            <button class="contribuicao-button" onclick="window.location.href='https://www.youtube.com'">10kg/mês</button>
-            <button class="contribuicao-button" onclick="window.location.href='https://www.youtube.com'">10kg/ano</button>
+            <button class="contribuicao-button"
+                onclick="window.location.href='https://www.youtube.com'">10kg/dia</button>
+            <button class="contribuicao-button"
+                onclick="window.location.href='https://www.youtube.com'">10kg/mês</button>
+            <button class="contribuicao-button"
+                onclick="window.location.href='https://www.youtube.com'">10kg/ano</button>
             <p>ADMIN você pretende contribuir 10kg/dia?</p>
-            <button class="contribuicao-button" onclick="window.location.href='https://www.youtube.com'">10kg/ano</button>
+            <button class="contribuicao-button-confirmation"
+                onclick="window.location.href='https://www.youtube.com'">Com certeza</button>
             <p>Informações atualizarão a tabela acima*</p>
         </div>
     </article>
-    <!-- Fim sobre-nos -->
-
-    <!-- Inicio Contato -->
-    <article class="contato-container">
-        <figure><img src="./Imgs/contato-img.png" alt="Header image" id="contato"></figure>
-        <div class="contato-header" id="home">
-            <a>Entre em contato</a>
-            <br/>
-            <a>Quer entrar em contato? Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</a>
-            <br/>
-            <div class="underline-contato-header"></div>
-        </div>
-        <div class="cards">
-            <div class="sobre-card">
-                <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
-                <div class="card-text">
-                    <p>Contato via WhatsApp</p>
-                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em dias úteis</p>
-                </div>
-                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique aqui</button>
-            </div>
-            <div class="sobre-card">
-                <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
-                <div class="card-text">
-                    <p>Contato via Email</p>
-                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em dias úteis</p>
-                </div>
-                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique aqui</button>
-            </div>
-        </div>
-    </article>
-    <!-- Fim contato -->
-
+    <!-- Fim contribuicao -->
     <!-- Inicio rodape -->
+    <!-- Inicio Contato -->
+    <div class="contato-container">
+        <div class="innerContato-container">
+            <img src="./Imgs/contato-img.png" alt="Header image" id="contato">
+            <div class="contato-header">
+                <p>Entre em contato</p>
+                <p>Quer entrar em contato? Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</p>
+                <div class="underline-contato-header"></div>
+            </div>
+            <div class="cards">
+                <div class="sobre-card">
+                    <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
+                    <div class="card-text">
+                        <p>Contato via WhatsApp</p>
+                        <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas
+                            em
+                            dias úteis</p>
+                    </div>
+                    <button class="button-card" onclick="window.location.href='https://wa.me/+5511963752185'">Clique
+                        aqui</button>
+                </div>
+                <div class="sobre-card">
+                    <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
+                    <div class="card-text">
+                        <p>Contato via Email</p>
+                        <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas
+                            em
+                            dias úteis</p>
+                    </div>
+                    <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique
+                        aqui</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fim contato -->
     <footer>
     </footer>
     <!-- Fim rodape -->
 </body>
+
 </html>

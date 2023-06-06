@@ -19,10 +19,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: normal;
 }
 
 p {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
 }
 
 /* Color change class -- alterar para melhor funcionamento*/
@@ -40,7 +41,6 @@ p {
 /* Inicio navbar */
 
 header {
-  align-items: center;
   display: flex;
   justify-content: center;
 }
@@ -48,14 +48,15 @@ header {
 .nav-bar {
   position: fixed;
   top: 0;
+  margin: 0;
   display: flex;
+  align-items: center !important;
   justify-content: space-around;
-  align-items: center;
+  text-align: center;
   background-color: #A4A3A3;
   width: 100%;
-  height: 7%;
   opacity: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .navbar-logo {
@@ -63,6 +64,8 @@ header {
 }
 
 .nav-links {
+  position: relative;
+  margin: 0;
   display: flex;
 }
 
@@ -82,45 +85,59 @@ header {
   transition: all 0.3s ease 0s;
   color: #FF9900;
 }
-
+.loginBar{
+  position: absolute;
+  left: 50%;
+  top: 200%;
+  transform: translate(-50%, -50%);
+}
 /* Fim navbar */
-
-.header{
-  position: relative;
-}
-.header img{
-  width: 100%;
-}
-
 .header-text {
   position: absolute;
   text-align: center;
+  z-index: 1;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.header-text a:first-child {
+.header-text p:first-child {
   font-weight: 800;
   font-size: 4em;
   color: #fff;
+  margin: 0;
   text-shadow: 3px 3px black;
 }
 
 .underline-header {
   width: 350px;
   height: 0px;
+  margin-bottom: 0.5em;
   border: 2px solid #fff;
   box-shadow: 3px 3px black;
 }
 
-.header-text a:last-child {
+.header-text p:last-child {
   font-weight: 800;
   font-size: 1.7em;
   color: #fff;
   text-shadow: 3px 3px black;
 }
 
+.carousel-control-next,
+.carousel-control-prev {
+  z-index: 0;
+}
+.carousel-indicators{
+
+  z-index: 1;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
 /* Fim header */
 
 /* Inicio home */
@@ -138,8 +155,8 @@ header {
   align-items: center;
   max-width: 700px;
   text-align: center;
-  color: #706F6F;
-  font-size: 1.3em;
+  color: #000000;
+  font-size: 1.5em;
   padding: 0 2em;
 }
 
@@ -201,8 +218,8 @@ header {
 }
 
 .servicos-image img {
-  max-width: 40%;
-  max-height: 40%;
+  max-width: 70%;
+  max-height: 70%;
   box-shadow: -25px 25px 1px #FF9900;
   border-radius: 20px;
 }
@@ -211,7 +228,8 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2em;
-  padding: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
 }
 
 .servicos-card {
@@ -250,7 +268,7 @@ header {
   font-size: 1.2em;
   font-weight: 800;
   color: #FF9900;
-  text-shadow: 2px 2px black;
+  text-shadow: 0.5px 0.5px black;
 }
 
 .servicos-text p:first-child {
@@ -283,12 +301,11 @@ header {
 }
 
 .impactos-text {
-  width: 60%;
   text-align: center;
-  color: #706F6F;
-  font-size: 2em;
+  color: #000000;
+  font-size: 1.5em;
   padding: 2em;
-  flex-basis: 45%;
+  flex-basis: 35%;
 }
 
 .impactos-image {
@@ -301,6 +318,7 @@ header {
 .impactos-image img {
   width: 80%;
   box-shadow: 25px 25px 1px #FF9900;
+  border-radius: 20px;
 }
 
 /* Fim impactos */
@@ -311,13 +329,13 @@ header {
   margin: 0 auto;
   padding-top: 7em;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .sobre-title {
-  font-size: 4.5em;
+  font-size: 3.5em;
   font-weight: 800;
   color: #FF9900;
   text-shadow: 2px 2px black;
@@ -329,10 +347,10 @@ header {
 .sobre-text {
   width: 60%;
   text-align: center;
-  color: #706F6F;
-  font-size: 2em;
-  padding-left: 2em;
-  flex-basis: 48%;
+  color: #000000;
+  font-size: 1.5em;
+  padding: 1em;
+  flex-basis: 38%;
 }
 
 .sobre-image {
@@ -343,8 +361,9 @@ header {
 }
 
 .sobre-image img {
-  width: 80%;
-  box-shadow: -25px -25px 1px #FF9900;
+  max-width: 70%;
+  box-shadow: -25px 25px 1px #FF9900;
+  border-radius: 20px;
 }
 
 /* Fim sobre-nos */
@@ -363,6 +382,7 @@ header {
   color: #FF9900;
   font-weight: bold;
   padding-top: 2em;
+  text-shadow: 2px 2px black;
 }
 
 .equipe-section {
@@ -452,22 +472,30 @@ header {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding-top: 7em;
   flex-wrap: wrap;
-  padding: 7em 0 24em 0;
+  padding-bottom: 25em;
 }
+.innerContato-container{
+  position: relative;
+}
+
 #contato{
   width: 100%;
+  padding-top: 7em;
 }
 
 .contato-header {
   position: absolute;
   text-align: center;
-  padding-bottom: 12em;
-  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.contato-header a:first-child {
+.contato-header p:first-child {
   font-weight: 800;
   font-size: 4em;
   color: #fff;
@@ -478,23 +506,23 @@ header {
   width: 950px;
   height: 0px;
   border: 2px solid #fff;
-  margin-left: 40px;
-
+  box-shadow: 2px 2px black;
 }
 
-.contato-header a:nth-child(3) {
+.contato-header p:nth-child(2) {
   font-weight: 800;
   font-size: 1.4em;
-  padding-bottom: -30px;
   color: #fff;
-  text-shadow: 3px 3px black;
+  text-shadow: 2px 2px black;
 }
 
 .cards {
   display: flex;
-  gap: 250px;
   position: absolute;
-  padding-top: 40em;
+  left: 50%;
+  top: 130%;
+  gap: 7em;
+  transform: translate(-50%, -50%);
 }
 
 .sobre-card {
