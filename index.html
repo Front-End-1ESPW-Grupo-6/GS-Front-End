@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodLink</title>
-    <link rel="shortcut icon"
-    href="./Imgs/Clean-logo.png"
-    type="image/x-icon">
+    <link rel="shortcut icon" href="./Imgs/Clean-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./Css/index.css">
-    <script src="https://kit.fontawesome.com/bfb4213bb3.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/bfb4213bb3.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 </head>
+
 <body>
     <!-- Inicio navbar -->
     <header>
-        <div class="nav-bar">
+        <nav class="nav-bar">
             <img class="navbar-logo" src="./Imgs/Logo.png" alt="Logo da empresa">
-            <nav>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#servicos">Serviços</a></li>
@@ -25,18 +24,19 @@
                     <li><a href="#sobre">Sobre nós</a></li>
                     <li><a href="#equipe">Equipe</a></li>
                     <li><a href="#contato">Contato</a></li>
+                </ul>
+                <ul class="nav-links">
                     <li><a href="./login.html">Login</a></li>
                 </ul>
-            </nav>
-        </div>
-        <img src="./Imgs/Home-img.png" alt="Header image" id="home">
-        <div class="header-text">
-            <a>FoodLink</a>
-            <br/>
-            <div class="underline-header"></div>
-            <br/>
-            <a>Dados que saciam a fome</a>
-        </div>
+        </nav>
+        <figure class="header">
+            <img src="./Imgs/Home-img.png" alt="Header image">
+            <div class="header-text">
+                <a>FoodLink</a>
+                <div class="underline-header"></div>
+                <a>Dados que saciam a fome</a>
+            </div>
+        </figure>
     </header>
     <!-- Fim navbar -->
 
@@ -44,57 +44,62 @@
     <article class="home-container">
         <div class="home-text">
             <p>Home</p>
-            <p>Junte-se à GaloTech Food. Ampliaremos o impacto e promoveremos soluções inovadoras para garantir segurança alimentar para todos na luta contra a fome.</p>
-            <p>Nossa expertise em coleta de dados e distribuição de informações fortalecerá nossos esforços conjuntos. Junte-se a nós agora!</p>
-            <button class="button-three" onclick="window.location.href='https://www.youtube.com'">Faça parte</button>
+            <p>Junte-se à GaloTech Food. Ampliaremos o impacto e promoveremos soluções inovadoras para garantir
+                segurança alimentar para todos na luta contra a fome.</p>
+            <p>Nossa expertise em coleta de dados e distribuição de informações fortalecerá nossos esforços conjuntos.
+                Junte-se a nós agora!</p>
+            <a href="#" class="butao">Faça parte</a>
         </div>
-        <figure class="home-image">
-            <img src="./Imgs/Logo.png" alt="LOGO"+>
-        </figure>
+        <img class="home-image" src="./Imgs/Logo.png" alt="LOGO" +>
     </article>
     <!-- Fim home -->
 
     <!-- Inicio Serviços -->
-    <article class="servicos-container" id="servicos">
-        <div class="impactos-title">Serviços</div>
-        <figure class="servicos-image">
-            <img src="./Imgs/servicos-img.jpg" alt="Imagem de doação de alimento">
-        </figure>
-        <div class="servicos-cards">
+    <div class="servicos-container" id="servicos">
+        <h1 class="impactos-title">Serviços</h1>
+        <div class="innerServicos-container">
+            <figure class="servicos-image">
+                <img src="./Imgs/servicos-img.jpg" alt="Imagem de doação de alimento">
+            </figure>
+            <div class="servicos-cards">
 
-            <div class="servicos-card">
-                <div class="servicos-card-text">
-                    <p>Ia generativa</p>
+                <div class="servicos-card">
+                    <div class="servicos-card-text">
+                        <p>Ia generativa</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="servicos-card">
-                <div class="servicos-card-text">
-                    <p>Análise de dados</p>
+    
+                <div class="servicos-card">
+                    <div class="servicos-card-text">
+                        <p>Análise de dados</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="servicos-card">
-                <div class="servicos-card-text">
-                    <p>Apresentação de resultados</p>
+    
+                <div class="servicos-card">
+                    <div class="servicos-card-text">
+                        <p>Apresentação de resultados</p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="servicos-card">
-                <div class="servicos-card-text">
-                    <p>Captação das ONGs</p>
+    
+                <div class="servicos-card">
+                    <div class="servicos-card-text">
+                        <p>Captação das ONGs</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </article>
+        
+    </div>
     <!-- Fim Serviços -->
 
     <!-- Inicio Impactos -->
     <article class="impactos-container" id="impactos">
         <div class="impactos-title">Impactos</div>
         <div class="impactos-text">
-            <p>Reduziremos a fome, promovendo segurança alimentar e melhorando a qualidade de vida das comunidades mais vulneráveis.</p>
-            <p>Além disso, nosso trabalho contribuirá para a sustentabilidade ambiental, combatendo o desperdício de alimentos e preservando recursos naturais preciosos.</p>
+            <p>Reduziremos a fome, promovendo segurança alimentar e melhorando a qualidade de vida das comunidades mais
+                vulneráveis.</p>
+            <p>Além disso, nosso trabalho contribuirá para a sustentabilidade ambiental, combatendo o desperdício de
+                alimentos e preservando recursos naturais preciosos.</p>
         </div>
         <figure class="impactos-image">
             <img src="./Imgs/impactos-img.jpg" alt="LOGO">
@@ -109,8 +114,10 @@
             <img src="./Imgs/sobre-nos-img.jpg" alt="LOGO">
         </figure>
         <div class="sobre-text">
-            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções inovadoras.</p>
-            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções inovadoras.</p>
+            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções
+                inovadoras.</p>
+            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções
+                inovadoras.</p>
         </div>
     </article>
     <!-- Fim sobre-nos -->
@@ -131,8 +138,8 @@
                 </div>
 
                 <div class="equipe-card">
-                    <div class="equipe-card-background"
-                        style="background-image: url(./Imgs/time/Guilherme\ A.jpg);"></div>
+                    <div class="equipe-card-background" style="background-image: url(./Imgs/time/Guilherme\ A.jpg);">
+                    </div>
                     <div class="equipe-content">
                         <div class="equipe-card-category">RM 98582</div>
                         <h3 class="equipe-card-heading">Guilherme Akio</h3>
@@ -140,8 +147,8 @@
                 </div>
 
                 <div class="equipe-card">
-                    <div class="equipe-card-background"
-                        style="background-image: url(./Imgs/time/Guilherme\ M.png);"></div>
+                    <div class="equipe-card-background" style="background-image: url(./Imgs/time/Guilherme\ M.png);">
+                    </div>
                     <div class="equipe-content">
                         <div class="equipe-card-category">RM 551981</div>
                         <h3 class="equipe-card-heading">Guilherme Morais</h3>
@@ -175,9 +182,9 @@
         <figure><img src="./Imgs/contato-img.png" alt="Header image" id="contato"></figure>
         <div class="contato-header" id="home">
             <a>Entre em contato</a>
-            <br/>
+            <br />
             <a>Quer entrar em contato? Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</a>
-            <br/>
+            <br />
             <div class="underline-contato-header"></div>
         </div>
         <div class="cards">
@@ -185,17 +192,21 @@
                 <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
                 <div class="card-text">
                     <p>Contato via WhatsApp</p>
-                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em dias úteis</p>
+                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em
+                        dias úteis</p>
                 </div>
-                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique aqui</button>
+                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique
+                    aqui</button>
             </div>
             <div class="sobre-card">
                 <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
                 <div class="card-text">
                     <p>Contato via Email</p>
-                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em dias úteis</p>
+                    <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas em
+                        dias úteis</p>
                 </div>
-                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique aqui</button>
+                <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique
+                    aqui</button>
             </div>
         </div>
     </article>
@@ -206,4 +217,5 @@
     </footer>
     <!-- Fim rodape -->
 </body>
+
 </html>
