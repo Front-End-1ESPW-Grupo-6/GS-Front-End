@@ -1,4 +1,5 @@
 ## Global Solution 1º Semestre - Front-End Design
+![Badge Concluido](https://img.shields.io/badge/STATUS-CONCLUIDO-GREEN)
 
 - Guilherme Akio - 98582
 - Matheus Motta - 550352
