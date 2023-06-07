@@ -53,7 +53,7 @@ header {
   align-items: center !important;
   justify-content: space-around;
   text-align: center;
-  background-color: #A4A3A3;
+  background-color: #a4a3a3d8;
   width: 100%;
   opacity: 100%;
   z-index: 2;
@@ -64,6 +64,7 @@ header {
 }
 
 .nav-links {
+  position: relative;
   margin: 0;
   display: flex;
 }
@@ -85,6 +86,53 @@ header {
   color: #FF9900;
 }
 
+.loginBar{
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #a4a3a3;
+  left: 59%;
+  top: 2.5em;
+  width: 220px;
+  max-height: 0px;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  transform: translate(-50%);
+}
+.abreNav {
+  max-height: 240px;
+}
+
+.loginBar a {
+  font-weight: 400;
+}
+.loginBar a:hover {
+  transition: all 0.3s ease 0s;
+  color: #FF9900;
+}
+.innerLoginBar{
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  padding-top: 1em;
+  padding-bottom: 4em;
+}
+.outerLoginBar{
+  padding-bottom: 1em;
+}
+.underline-loginBar{
+  height: 0px;
+  width: 100%;
+  margin-bottom: 0.5em;
+  border: 1px solid #000000;
+}
+.innerLoginBar a{
+  padding-bottom: 0.5em;
+}
 /* Fim navbar */
 .header-text {
   position: absolute;

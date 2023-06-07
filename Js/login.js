@@ -134,11 +134,19 @@ console.log(listaUser)
 
 if (listaUser == null) {
     console.log('Lista de usuarios nao encontrada, criando uma nova...')
-    const admin = {  //Admin
+    const admin1 = {  //Admin
         name: "GaloAdmin",
-        nick: "Admin",
+        nick: "GaloAdmin",
         email: "contatogalofiap@gmail.com",
-        senhaUser: "12345",
+        senhaUser: "123456",
+        number: "11963752185",
+        accountType: "ONG"
+    }
+    const admin2 = {  //Admin
+        name: "Admin",
+        nick: "Admin",
+        email: "Admin",
+        senhaUser: "123456",
         number: "11963752185",
         accountType: "ONG"
     }
