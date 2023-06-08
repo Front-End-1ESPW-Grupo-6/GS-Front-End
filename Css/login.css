@@ -346,11 +346,12 @@ body {
 /* Error menssage class */
 .redAlert {
     color: red;
+    text-shadow: 1px 1px black;
 }
 
 .greenAlert {
     color: rgb(32, 173, 32);
-    text-shadow: 2px 2px black;
+    text-shadow: 1px 1px black;
 }
 
 .showAlert {
