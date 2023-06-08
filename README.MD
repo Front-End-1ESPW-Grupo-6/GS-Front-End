@@ -7,6 +7,10 @@
 - Fabrício Saavedra - 97631	
 - Vinicius Buzato - 99125
 ___
+<div align=center>
+<img src="imagens/Identificacao_Problema.png" widht="200" height="400">
+</div>
+
 ### Descrição do Projeto - Identificação do Problema
 No fim de 2020, de acordo com dados do VIGISAN (Sistema de Vigilância Alimentar e Nutricional), foi constatado que 19,1 milhões de brasileiros/as conviviam com a fome. Tragicamente, em 2022, esse número alarmante aumentou para 33,1 milhões de pessoas sem ter o que comer. Diante dessa realidade preocupante, surge a proposta de um projeto inovador que visa combater a fome no Brasil por meio da aplicação de tecnologia, inovação e IA generativa.
 
@@ -38,3 +42,16 @@ ___
 ___
 ### Resultados esperados e impactos:
 O objetivo da solução que idealizamos é melhor ilustrar a respeito da situação da fome em diferentes regiões, e informar adequadamente os agentes responsáveis por ajudar nesta causa, como ONGs e órgãos públicos, de modo que as ações sociais voltadas ao problema sejam mais eficientes e, consequentemente, a fome seja combatida de melhor forma, com as regiões mais necessitadas recebendo um auxílio adequado para sua situação
+___
+### Considerações Finais:
+
+No desenvolvimento deste WebSite, utilizamos bibliotecas como Cleave e Bootstrap, como permitido pelo professor de JavaScript Alexandre Carlos de Jesus. Essas bibliotecas garantem o funcionamento e a aparência visual adequada do site.
+
+Ao invés de direcionar imediatamente para o site da UNICEF, após o login é liberado um acesso a um menu onde pode-se encontrar um link para o site, garantindo uma melhor experiência do usuário
+
+Para fins de teste, já existe uma conta de administrador pré-configurada com as seguintes credenciais:
+
+Usuário: Admin
+Senha: 123456
+
+As informações fornecidas são apenas para fins de teste e demonstração, devendo ser utilizadas de forma responsável e dentro dos limites estabelecidos.
