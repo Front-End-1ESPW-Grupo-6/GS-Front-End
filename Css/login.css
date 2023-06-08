@@ -92,7 +92,8 @@ body {
     font-weight: 900;
     font-size: 2em;
     padding: 0 2em;
-    background: #FF9900;
+    background: rgb(161, 161, 161);
+    transition-duration: 0.4s;
     border-radius: 50px;
     margin: 1em auto;
     border: none;
@@ -116,6 +117,12 @@ body {
     font-weight: 700;
     color: black;
 }
+
+  .loginSubmitBtn:hover {
+    background: #FF9900;
+    box-shadow: 0px 2px 10px 5px #97B1BF;
+    color: #fff;
+  }
 /* End login area */
 /* Inicio cadastro usuario */
 .signupContainer {
@@ -197,11 +204,17 @@ body {
     font-weight: 900;
     font-size: 2em;
     padding: 0 2em;
-    background: #FF9900;
+    background: #D9D9D9;
     border-radius: 50px;
     margin: 0.5em auto;
     border: none;
+    transition-duration: 0.4s;
 }
+.signupSubmitBtn:hover {
+    background: #FF9900;
+    box-shadow: 0px 2px 10px 5px #97B1BF;
+    color: #fff;
+  }
 .redirectOngSignup,
 .redirectLogin{
     font-weight: 700;
@@ -297,11 +310,17 @@ body {
     font-weight: 900;
     font-size: 2em;
     padding: 0 2em;
-    background: #FF9900;
+    background: #D9D9D9;
     border-radius: 50px;
     margin: 0.5em auto;
     border: none;
+    transition-duration: 0.4s;
 }
+.signupOngSubmitBtn:hover {
+    background: #FF9900;
+    box-shadow: 0px 2px 10px 5px #97B1BF;
+    color: #fff;
+  }
 .redirectLoginOng,
 .redirectSignup-Ong{
     font-weight: 700;
@@ -330,7 +349,8 @@ body {
 }
 
 .greenAlert {
-    color: rgb(44, 212, 44);
+    color: rgb(32, 173, 32);
+    text-shadow: 2px 2px black;
 }
 
 .showAlert {
@@ -339,17 +359,6 @@ body {
 
 .hideAlert {
     visibility: hidden;
-}
-
-/* Color change class -- alterar para melhor funcionamento*/
-.darkMode {
-    color: #fff;
-    background-color: black;
-}
-
-.whiteMode {
-    color: black;
-    background-color: #fff;
 }
 
 /* Index class */

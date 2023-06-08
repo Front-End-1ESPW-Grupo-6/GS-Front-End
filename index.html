@@ -34,7 +34,7 @@
                 <div class="loginBar" id="loginBar">
                     <div class="innerLoginBar">
                         <a href="./index.html">Pagina Inicial</a>
-                        <a href="./area-de-usuario.html">Food link</a>
+                        <a href="./area-de-usuario.html">Area de contribuição</a>
                         <a
                             href="https://www.unicef.org/brazil/comunicados-de-imprensa/relatorio-da-onu-numeros-globais-de-fome-subiram-para-cerca-de-828-milhoes-em-2021">Unicef</a>
                     </div>
@@ -43,9 +43,18 @@
                         <a id="desconect" href="javascript:void(0);" id="loginBar">Desconectar</a></li>
                     </div>
                 </div>
+                <input type="checkbox" id="toggle_checkbox">
+                <label for="toggle_checkbox" class="darkmode">
+                    <div id="sun"></div>
+                    <div id="moon"></div>
+                </label>
             </ul>
         </nav>
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="relogio-tamanho">
+                <div class="clock"></div>
+                <div class="date"></div>
+            </div>
             <div class="header-text">
                 <p>FoodLink</p>
                 <div class="underline-header"></div>
@@ -59,15 +68,15 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./Imgs/Home-img.png" class="d-block w-100" alt="...">
+                    <img src="./Imgs/Home-img.png" class="d-block w-100" alt="Plantação de trigo banner">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Imgs/kraft_heinz_edit.jpg" class="d-block w-100" alt="...">
+                    <img src="./Imgs/kraft_heinz_edit.jpg" class="d-block w-100" alt="Foto Kraft Heinz banner">
                 </div>
                 <div class="carousel-item">
-                    <img src="./Imgs/fiap_edit.jpg" class="d-block w-100" alt="...">
+                    <img src="./Imgs/fiap_edit.png" class="d-block w-100" alt="Foto logo Fiap banner">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -86,13 +95,18 @@
     <article class="home-container" id="home">
         <div class="home-text">
             <p>Home</p>
-            <p>Junte-se à GaloTech Food. Ampliaremos o impacto e promoveremos soluções inovadoras para garantir
-                segurança alimentar para todos na luta contra a fome.</p>
-            <p>Nossa expertise em coleta de dados e distribuição de informações fortalecerá nossos esforços conjuntos.
-                Junte-se a nós agora!</p>
-            <a href="#" class="butao">Faça parte</a>
+            <p>Somos a FoodLink, um projeto para uma solução inovadora para ampliar o impacto de ações na luta contra a
+                fome.</p>
+            <p>Nos especializamos na coleta de dados e distribuição de informações para fortalecer esforços conjuntos de
+                pessoas e organizações.</p>
+            <p>Junte-se você também!</p>
+            <a href="./area-de-usuario.html" class="butao">Faça parte</a>
         </div>
-        <img class="home-image" src="./Imgs/Logo.png" alt="LOGO" +>
+        <img class="home-image" src="./Imgs/Logo.png" alt="Logo da marca FoodLink">
+        <iframe class="video" src="https://www.youtube.com/embed/WeEiVd5v67s" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
     </article>
     <!-- Fim home -->
 
@@ -101,31 +115,39 @@
         <h1 class="impactos-title">Serviços</h1>
         <div class="innerServicos-container">
             <figure class="servicos-image">
-                <img src="./Imgs/servicos-img.jpg" alt="Imagem de doação de alimento">
+                <img src="./Imgs/servicos-img.jpg" alt="Imagem de um coração feito por grãos de arroz">
             </figure>
             <div class="servicos-cards">
 
                 <div class="servicos-card">
                     <div class="servicos-card-text">
-                        <p>Ia generativa</p>
+                        <p>IA Generativa</p>
+                        <p>Utilizamos uma Inteligência Artificial generativa para analisar dados complexos e obter
+                            insights precisos sobre a situação alimentar.</p>
                     </div>
                 </div>
 
                 <div class="servicos-card">
                     <div class="servicos-card-text">
-                        <p>Análise de dados</p>
+                        <p>Análise de Dados</p>
+                        <p>Processamos indicadores econômicos, sociais e demográficos para compreender a fome por região
+                            e estado.</p>
                     </div>
                 </div>
 
                 <div class="servicos-card">
                     <div class="servicos-card-text">
-                        <p>Apresentação de resultados</p>
+                        <p>Apresentação de Resultados</p>
+                        <p>Apresentamos os dados de forma visual e intuitiva, destacando áreas mais afetadas pela fome.
+                        </p>
                     </div>
                 </div>
 
                 <div class="servicos-card">
                     <div class="servicos-card-text">
                         <p>Captação das ONGs</p>
+                        <p>ONGs podem se cadastrar e fornecer informações sobre sua atuação para otimizar a distribuição
+                            de recursos.</p>
                     </div>
                 </div>
             </div>
@@ -138,31 +160,32 @@
     <article class="impactos-container" id="impactos">
         <div class="impactos-title">Impactos</div>
         <div class="impactos-text">
-            <p>Reduziremos a fome, promovendo segurança alimentar e melhorando a qualidade de vida das comunidades mais
-                vulneráveis.</p>
-            <p>Além disso, nosso trabalho contribuirá para a sustentabilidade ambiental, combatendo o desperdício de
-                alimentos e preservando recursos naturais preciosos.</p>
+            <p>Ao tornarmos mais eficiente o conhecimento do problema para melhorar a distribuição de alimentos para as
+                pessoas que necessitam, ajudamos no bem-estar dessas pessoas, garantindo sua saúde e até mesmo salvando
+                vidas </p>
+            <p>Além disso, contribuimos para a sustentabilidade ambiental, combatendo o desperdício de alimentos e
+                preservando recursos naturais.</p>
         </div>
         <figure class="impactos-image">
-            <img src="./Imgs/impactos-img.jpg" alt="LOGO">
+            <img src="./Imgs/impactos-img.jpg" alt="Imagem de doação de alimento">
         </figure>
     </article>
     <!-- Fim impactos -->
 
-    <!-- Inicio sobre-nos -->
+    <!-- Inicio sobre nós -->
     <article class="sobre-container" id="sobre">
         <div class="sobre-title">Sobre-nós</div>
         <figure class="sobre-image">
-            <img src="./Imgs/sobre-nos-img.jpg" alt="LOGO">
+            <img src="./Imgs/galo logo icon.png" alt="Logo do grupo Galo">
         </figure>
         <div class="sobre-text">
-            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções
-                inovadoras.</p>
-            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções
-                inovadoras.</p>
+            <p>A FoodLink é uma inciativa Galo. Somos um grupo com um compromisso ético para com a sociedade, e
+                acreditamos que a tecnologia deve ser usada para melhorar a vida das pessoas.</p>
+            <p>Por isso, nossos projetos se voltam justamente para as pessoas e suas necessidades, buscando soluções
+                inovadoras para os problemas atuais.</p>
         </div>
     </article>
-    <!-- Fim sobre-nos -->
+    <!-- Fim sobre nós -->
 
     <!-- Inicio Equipe -->
     <div class="equipe-container" id="equipe">
@@ -218,46 +241,56 @@
         </section>
     </div>
     <!-- Fim Equipe -->
-    <!-- Inicio rodape -->
+
+    <!-- Inicio rodapé -->
     <!-- Inicio Contato -->
     <div class="contato-container">
         <div class="innerContato-container">
-            <img src="./Imgs/contato-img.png" alt="Header image" id="contato">
+            <img src="./Imgs/contato-img.png" alt="Imagem de plantação" id="contato">
             <div class="contato-header">
                 <p>Entre em contato</p>
-                <p>Quer entrar em contato? Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</p>
+                <p>Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</p>
                 <div class="underline-contato-header"></div>
             </div>
             <div class="cards">
                 <div class="sobre-card">
-                    <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
+                    <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt="Ícone de whatsApp">
+                    </figure>
                     <div class="card-text">
-                        <p>Contato via WhatsApp</p>
-                        <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas
-                            em
-                            dias úteis</p>
+                        <p>Contato via WhatsApp</p><br>
+                        <p>Em caso de dúvidas, entre em contato!</p>
+                        <p>Nosso atendimento é das 08:00 as 18:00, com respostas em até 24 horas durante dias úteis</p>
                     </div>
                     <button class="button-card" onclick="window.location.href='https://wa.me/+5511963752185'">Clique
                         aqui</button>
                 </div>
                 <div class="sobre-card">
-                    <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
+                    <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt="Ícone de email"></figure>
                     <div class="card-text">
-                        <p>Contato via Email</p>
-                        <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas
-                            em
-                            dias úteis</p>
+                        <p>Contato via Email</p><br>
+                        <p>Em caso de dúvidas, entre em contato!</p>
+                        <p>Seu email será respondidoem até 24 horas durante dias úteis</p>
                     </div>
-                    <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique
+                    <button class="button-card" onclick="window.location.href='mailto:ContatoGaloFiap@gmail.com'">Clique
                         aqui</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Fim contato -->
+
+    <!-- Início logo marcas-->
     <footer>
+        <figure class="footer">
+            <img src="./Imgs/Microsoft-Logo.png" alt="Logo microsoft">
+            <img src="./Imgs/logo_caca" alt="logo caça-fome">
+            <img src="./Imgs/Kraft-Heinz_PNG.png" alt="Logo Kraft Heinz">
+            <img src="./Imgs/galo logo icon.png" alt="Logo galo">
+            <img src="./Imgs/logo-fiap.png" alt="Logo Fiap">
+        </figure>
     </footer>
-    <!-- Fim rodape -->
+    <!-- Fim logo marcas-->
+    <!-- Fim rodapé -->
 </body>
 
 </html>

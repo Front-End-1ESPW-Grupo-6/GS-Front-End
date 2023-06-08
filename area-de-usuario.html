@@ -8,10 +8,10 @@
     <title>FoodLink</title>
     <link rel="shortcut icon" href="./Imgs/Clean-logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Css/area-de-usuario.css">
     <script src="./Js/area-de-usuario.js" defer></script>
 </head>
@@ -23,9 +23,9 @@
             <img class="navbar-logo" src="./Imgs/Logo.png" alt="Logo da empresa">
             <ul class="nav-links">
                 <li><a href="#food">FoodLink</a></li>
+                <li><a href="#mapa">Mapa da fome</a></li>
                 <li><a href="#atuacao">Atuação</a></li>
                 <li><a href="#contribuicao">Contribuição</a></li>
-                <li><a href="#mapa">Mapa da fome</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
             <ul class="nav-links">
@@ -33,7 +33,7 @@
                 <div class="loginBar" id="loginBar">
                     <div class="innerLoginBar">
                         <a href="./index.html">Pagina Inicial</a>
-                        <a href="./area-de-usuario.html">Food link</a>
+                        <a href="./area-de-usuario.html">Area de contribuição</a>
                         <a
                             href="https://www.unicef.org/brazil/comunicados-de-imprensa/relatorio-da-onu-numeros-globais-de-fome-subiram-para-cerca-de-828-milhoes-em-2021">Unicef</a>
                     </div>
@@ -42,11 +42,20 @@
                         <a id="desconect" href="javascript:void(0);" id="loginBar">Desconectar</a></li>
                     </div>
                 </div>
+                <input type="checkbox" id="toggle_checkbox">
+                <label for="toggle_checkbox" class="darkmode">
+                    <div id="sun"></div>
+                    <div id="moon"></div>
+                </label>
             </ul>
         </nav>
         <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="relogio-tamanho">
+                <div class="clock"></div>
+                <div class="date"></div>
+            </div>
             <div class="header-text">
-                <p>ADMIN</p>
+                <p id="nameHeader">PlaceHolder</p>
                 <p>Bem vindo de volta</p>
                 <div class="underline-header"></div>
             </div>
@@ -58,15 +67,15 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./Imgs/Home-img.png" class="d-block w-100" alt="...">
+                    <img src="./Imgs/Home-img.png" class="d-block w-100" alt="Plantação de trigo banner">
                     <div class="carousel-caption d-none d-md-block">
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./Imgs/kraft_heinz_edit.jpg" class="d-block w-100" alt="...">
+                    <img src="./Imgs/kraft_heinz_edit.jpg" class="d-block w-100" alt="Foto Kraft Heinz banner">
                 </div>
                 <div class="carousel-item">
-                    <img src="./Imgs/fiap_edit.jpg" class="d-block w-100" alt="...">
+                    <img src="./Imgs/fiap_edit.png" class="d-block w-100" alt="Foto logo Fiap banner">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
@@ -81,56 +90,72 @@
     </header>
     <!-- Fim navbar -->
 
-    <!-- Inicio foodlink -->
+    <!-- Inicio Foodlink -->
     <article class="foodlink-container">
         <div class="foodlink-title">FoodLink</div>
         <div class="foodlink-text">
-            <p>Esta area é definida para o uso do programa tanto de ongs quanto de usuarios, futuramente esta pagina
-                pretende ser personalizada para uso apenas de ongs ou apenas de usuarios</p>
+            <br>
+            <p>Esta area é dedicada para uso prático do programa, tanto por parte de ONGs quanto de demais usuários.</p>
+            <p>Futuramente esta pagina será personalidada de acordo com o tipo de acesso (ONGs ou demais usuários).</p>
         </div>
     </article>
     <!-- Fim foodlink -->
 
     <!-- Inicio mapa da fome -->
     <article class="mapa-container" id="mapa">
-        <div class="mapa-title">Mapa da fome</div>
+        <div class="mapa-title">Mapa da Fome</div>
         <figure class="mapa-image">
-            <img src="./Imgs/mapa_fome.png" alt="LOGO">
+            <img src="./Imgs/mapa_fome.png"
+                alt="Ilustrção de mapa mostrando % de domicílios com insegurança alimentar grave">
         </figure>
         <div class="mapa-text">
-            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções
-                inovadoras.</p>
-            <p>Somos uma empresa comprometida em combater a fome e promover segurança alimentar por meio de soluções
-                inovadoras.</p>
+            <p>De acordo com o mapa da fome, ações de distribuição de alimentos podem ser melhor orientadas, visando
+                atender as áreas mais necessitadas</p>
+            <p>As informações aqui apresentadas são apenas um parâmetro para direcionar a atuação no combate a fome,
+                cabendo à organização responsável a decisão final de como e onde agir.</p>
         </div>
         <figure class="mapa2-image">
-            <img src="./Imgs/grafico_regiao.png" alt="LOGO">
+            <img src="./Imgs/grafico_regiao.png"
+                alt="Ilustrção de gráficos mostrando % de domicílios com insegurança alimentar grave">
         </figure>
     </article>
     <!-- Fim mapa da fome -->
 
-    <!-- Inicio atuacao -->
+    <!-- Inicio atuação -->
     <article class="atuacao-container" id="atuacao">
         <div class="atuacao-title">Atuação</div>
         <figure class="atuacao-image">
-            <img src="./Imgs/alagoas.png" alt="LOGO">
+            <div class="radioAtuacao">
+                <label>
+                    <input type="radio" id="alagoas" name="valorAtuacao" value="alagoas" checked>
+                    <span>Alagoas</span>
+                </label>
+                <label>
+                    <input type="radio" id="amapa" name="valorAtuacao" value="amapa">
+                    <span>Amapa</span>
+                </label>
+                <span class="selecionado"></span>
+            </div>
+            <img id="mapaEstado" src="./Imgs/alagoas.png" alt="Ilustração de Alagoas">
+            <img id="graficoEstado" src="./Imgs/grafico_alagoas.png" alt="LOGO">
         </figure>
         <div class="atuacao-text">
-            <p>Populaçao: 56,7 milhões </p>
-            <p>Mais de x% passam fome</p>
-            <p>Nivel de fome: 3</p>
-            <br />
-            <p>Esta area esta em grande carencia alimentar</p>
-            <p>Para suprir seriam necessarios:</p>
-            <p>40kg de alimento por dia</p>
-            <p>40kg de alimento por mes</p>
-            <p>40kg de alimento por ano</p>
-            <p>Pretende doar alimentos para essa area?</p>
-            <button class="atuacao-button" onclick="window.location.href='https://www.youtube.com'">Contribuir</button>
+            <div class="title">
+                <p id="lugar">Alagoas
+                    </br>
+                    Estado do norte com maior carencia alimentar</p>
+                <p>Populaçao: <span id="aPopulacao">3,32 milhões</span></p>
+                <p><span id="aPorcentagem">36,7% passam fome</span></p>
+                <p>Para suprir seriam necessarios:</p>
+            </div>
+            <div class="atuacao-info">
+                <p><span id="aPorDia">3.705 ton</span> de alimento por dia</p>
+                <p><span id="aPerMes">111.150 ton</span> de alimento por mês</p>
+                <p><span id="aPerAno">1.333.800 ton</span> de alimento por ano</p>
+                <p>Pretende doar alimentos para essa area?</p>
+            </div>
+            <a href="#contribuicao" class="atuacao-button">Contribuir</a>
         </div>
-        <figure class="atuacao-image">
-            <img src="./Imgs/grafico_estado.png" alt="LOGO">
-        </figure>
     </article>
     <!-- Fim atuacao -->
 
@@ -138,63 +163,83 @@
     <article class="contribuicao-container" id="contribuicao">
         <div class="contribuicao-title">Contribuição</div>
         <div class="contribuicao-text">
-            <p>A sua ajuda é muito importante para a causa, nao fornecemos ajuda diretamente as pessoas mas ajudamos a
-                sua instituição a chegar onde mais precisam, e para isso recolhemos essa informação para ajudar a sempre
-                melhorar o nosso sistema</p>
+            <p>Nosso objetivo é ajudar a encontrar as regiões que mais precisam de ajuda, e contamos com seu apoio ao
+                fornecer alimentos para esses locais.</p>
+            <p>A sua ajuda é muito importante para a causa, e recolhemos a informação sobre sua contribuição para
+                atualizar nosso sistema</p>
         </div>
-        <div class="contribuicao-panel">
-            <button class="contribuicao-button"
-                onclick="window.location.href='https://www.youtube.com'">10kg/dia</button>
-            <button class="contribuicao-button"
-                onclick="window.location.href='https://www.youtube.com'">10kg/mês</button>
-            <button class="contribuicao-button"
-                onclick="window.location.href='https://www.youtube.com'">10kg/ano</button>
-            <p>ADMIN você pretende contribuir 10kg/dia?</p>
-            <button class="contribuicao-button-confirmation"
-                onclick="window.location.href='https://www.youtube.com'">Com certeza</button>
-            <p>Informações atualizarão a tabela acima*</p>
-        </div>
+        <form class="contribuicao-panel">
+            <div class="radio-input">
+                <label>
+                    <input type="radio" id="value-1" name="value-radio" value="value-1" checked>
+                    <span>10 ton / dia</span>
+                </label>
+                <label>
+                    <input type="radio" id="value-2" name="value-radio" value="value-2">
+                    <span>10 ton / mês</span>
+                </label>
+                <label>
+                    <input type="radio" id="value-3" name="value-radio" value="value-3">
+                    <span>10 ton / ano</span>
+                </label>
+                <span class="selection"></span>
+            </div>
+            <p><span id="nameContrib"> PlaceHolder </span> você pretende contribuir <span id="quantiaContrib">10
+                    ton/dia?</span></p>
+            <button class="contribuicao-button-confirmation" id="contribuicao-button-confirmation">Com certeza</button>
+            <p class="hide" id="agradecimento">Obrigado por contribuir e fazer parte do projeto!</p>
+        </form>
     </article>
     <!-- Fim contribuicao -->
-    <!-- Inicio rodape -->
+
+    <!-- Inicio rodapé -->
     <!-- Inicio Contato -->
     <div class="contato-container">
         <div class="innerContato-container">
-            <img src="./Imgs/contato-img.png" alt="Header image" id="contato">
+            <img src="./Imgs/contato-img.png" alt="Imagem de plantação" id="contato">
             <div class="contato-header">
                 <p>Entre em contato</p>
-                <p>Quer entrar em contato? Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</p>
+                <p>Nós adoraríamos ouvir você. Aqui como você pode chegar até nós</p>
                 <div class="underline-contato-header"></div>
             </div>
             <div class="cards">
                 <div class="sobre-card">
-                    <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt=""></figure>
+                    <figure class="sobre-img"><img src="./Imgs/Icons/whatsapp-icon.png" alt="Ícone de whatsApp">
+                    </figure>
                     <div class="card-text">
-                        <p>Contato via WhatsApp</p>
-                        <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas
-                            em
-                            dias úteis</p>
+                        <p>Contato via WhatsApp</p><br>
+                        <p>Em caso de dúvidas, entre em contato!</p>
+                        <p>Nosso atendimento é das 08:00 as 18:00, com respostas em até 24 horas durante dias úteis</p>
                     </div>
                     <button class="button-card" onclick="window.location.href='https://wa.me/+5511963752185'">Clique
                         aqui</button>
                 </div>
                 <div class="sobre-card">
-                    <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt=""></figure>
+                    <figure class="sobre-img"><img src="./Imgs/Icons/email-icon.png" alt="Ícone de email"></figure>
                     <div class="card-text">
-                        <p>Contato via Email</p>
-                        <p>Em caso de dúvida entre em contato, atendimento das 08:00 as 18:00 resposta em até 24 horas
-                            em
-                            dias úteis</p>
+                        <p>Contato via Email</p><br>
+                        <p>Em caso de dúvidas, entre em contato!</p>
+                        <p>Seu email será respondidoem até 24 horas durante dias úteis</p>
                     </div>
-                    <button class="button-card" onclick="window.location.href='https://www.youtube.com'">Clique
+                    <button class="button-card" onclick="window.location.href='mailto:ContatoGaloFiap@gmail.com'">Clique
                         aqui</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- Fim contato -->
+
+    <!-- Início logo marcas-->
     <footer>
+        <figure class="footer">
+            <img src="./Imgs/Microsoft-Logo.png" alt="Logo microsoft">
+            <img src="./Imgs/logo_caca" alt="logo caça-fome">
+            <img src="./Imgs/Kraft-Heinz_PNG.png" alt="Logo Kraft Heinz">
+            <img src="./Imgs/galo logo icon.png" alt="Logo galo">
+            <img src="./Imgs/logo-fiap.png" alt="Logo Fiap">
+        </figure>
     </footer>
+    <!-- Fim logo marcas-->
     <!-- Fim rodape -->
 </body>
 

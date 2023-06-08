@@ -14,9 +14,9 @@ let redirectSignupOng = document.querySelector('#redirectSignup-Ong');
 let loginSubmitBtn = document.querySelector('#loginSubmitBtn');
 let signupSubmitBtn = document.querySelector('#signupSubmitBtn');
 let signupOngSubmitBtn = document.querySelector('#signupOngSubmitBtn');
-//Darkmode
 
-//Eyes Toggles
+
+//Icone olho
 eyePassLogin.addEventListener('click', () => {
     console.log('Password hide')
     let textPassLogin = document.querySelector('#pass-Login-Input');
@@ -78,7 +78,8 @@ eyePassOngSignupConfirm.addEventListener('click', () => {
     }
 })
 
-//Page Toggles
+
+//Troca de páginas
 redirectSignup.addEventListener('click', () => {
     let loginContainer = document.querySelector('#loginContainer');
     let signupContainer = document.querySelector('#signupContainer');
@@ -128,13 +129,15 @@ redirectSignupOng.addEventListener('click', () => {
     signupContainer.classList.remove('hide')
     signupOngContainer.classList.add('hide')
 })
-//Account System
+
+
+//Cadastro de usuário
 let listaUser = JSON.parse(localStorage.getItem("usersList"))
 console.log(listaUser)
 
 if (listaUser == null) {
     console.log('Lista de usuarios nao encontrada, criando uma nova...')
-    const admin1 = {  //Admin
+    const admin1 = {  //Acesso GaloAdmin
         name: "GaloAdmin",
         nick: "GaloAdmin",
         email: "contatogalofiap@gmail.com",
@@ -142,7 +145,7 @@ if (listaUser == null) {
         number: "11963752185",
         accountType: "ONG"
     }
-    const admin2 = {  //Admin
+    const admin2 = {  //Acesso Admin
         name: "Admin",
         nick: "Admin",
         email: "Admin",
@@ -157,25 +160,27 @@ if (listaUser == null) {
     console.log('Lista de usuarios recuperada')
 }
 
-//Login system
+
+//Login de usuário
 loginSubmitBtn.addEventListener("click", (evt) => {
     evt.preventDefault()
 
-    let listaDeUsuario = JSON.parse(localStorage.getItem("usersList")); //busca contas no storage
+    let listaDeUsuario = JSON.parse(localStorage.getItem("usersList")); //Busca de contas no LocalStorage
     let baseInput = document.querySelector("#loginBaseInput").value;
     let senhaInput = document.querySelector("#pass-Login-Input").value;
     let loginAlert = document.querySelector("#loginAlert")
 
-    if (baseInput === "" || senhaInput === "") { //validações
+     //Validações de usuário e senha
+    if (baseInput === "" || senhaInput === "") {
         loginAlert.innerHTML = 'Preencha todos os campos'
         loginAlert.classList.remove('hide')
         loginAlert.classList.add('redAlert')
     } else {
-        const acharUsuario = listaDeUsuario.find(usuario => { //função .find para simplificar a busca de usuarios
+        const acharUsuario = listaDeUsuario.find(usuario => { //função .find para simplificar a busca de usuários
             return usuario.email === baseInput || usuario.cnpj === baseInput && usuario.senhaUser === senhaInput;
         });
         if (acharUsuario) {
-            let logUser = [acharUsuario]; //define qual usuario foi logado
+            let logUser = [acharUsuario]; //define qual usuário foi logado
             localStorage.setItem("logedUser", JSON.stringify(logUser))
             localStorage.setItem("userLog", "1");
             console.log("Usuario Validado! Carregando pagina...")
@@ -184,7 +189,7 @@ loginSubmitBtn.addEventListener("click", (evt) => {
             loginAlert.innerHTML = "Login Efetuado! Redirecionando..."
             setTimeout(function () {
                 window.location.href = "./index.html";
-            }, 3000);
+            }, 1000);
         } else {
             loginAlert.classList.remove('hide')
             loginAlert.classList.add('redAlert')
@@ -193,8 +198,9 @@ loginSubmitBtn.addEventListener("click", (evt) => {
         }
     }
 })
-//Signup
-//User signup system
+
+
+//biblioteca para registro de telefone
 new Cleave('#number-Signup-Input', {
     prefix: '+55',
     blocks: [3, 2, 5, 4],
@@ -204,7 +210,8 @@ new Cleave('#number-Signup-Input', {
 
 signupSubmitBtn.addEventListener("click", (evt) => {
     evt.preventDefault();
-    //Signup var
+
+    //Variáveis para cadastro
     let signupMsgAlert = document.querySelector('#signupAlert')
     let nameInput = document.querySelector('#name-Signup-Input').value;
     let nicknameInput = document.querySelector('#nick-Signup-Input').value;
@@ -212,7 +219,9 @@ signupSubmitBtn.addEventListener("click", (evt) => {
     let numberInput = document.querySelector('#number-Signup-Input').value;
     let passwordInput = document.querySelector('#pass-Signup-Input').value;
     let passConfirmInput = document.querySelector('#passConfirm-Signup-Input').value;
-    //Signup Confirm
+
+
+    //Confirmação de cadastro
     if (nameInput == "" || nicknameInput == "" || emailInput == "" || numberInput == "" || passwordInput == "" || passConfirmInput == "") {
         console.log('Todos os campos devem ser preenchidos');
         signupMsgAlert.innerHTML = 'Todos os campos devem ser preenchidos';
@@ -220,7 +229,7 @@ signupSubmitBtn.addEventListener("click", (evt) => {
         signupMsgAlert.classList.remove('hide');
         return;
     }
-    //email
+    //Validações email
     if (emailInput.length < 5) {
         console.log('Email deve conter mais de 5 letras');
         signupMsgAlert.innerHTML = 'Email deve conter mais de 5 caracteres';
@@ -234,7 +243,7 @@ signupSubmitBtn.addEventListener("click", (evt) => {
         signupMsgAlert.classList.remove('hide');
         return;
     }
-    //Number
+    //Validações número de telefone
     if (numberInput.length < 17) {
         console.log('O número de telefone deve conter 11 dígitos');
         signupMsgAlert.innerHTML = 'O número de telefone deve conter 11 dígitos';
@@ -242,7 +251,7 @@ signupSubmitBtn.addEventListener("click", (evt) => {
         signupMsgAlert.classList.remove('hide');
         return;
     }
-    //Password
+    //Validações senha
     if (passwordInput.length < 6) {
         console.log('Senha deve conter no minimo 6 digitos');
         signupMsgAlert.innerHTML = 'Senha deve conter no minimo 6 digitos'
@@ -250,7 +259,7 @@ signupSubmitBtn.addEventListener("click", (evt) => {
         signupMsgAlert.classList.remove('hide');
         return;
     }
-    //Password Confirm
+    //Validações confirmação de senha
     if (passConfirmInput != passwordInput) {
         console.log('Senhas digitadas não coincidem');
         signupMsgAlert.innerHTML = 'Senhas digitadas não coincidem';
@@ -268,16 +277,22 @@ signupSubmitBtn.addEventListener("click", (evt) => {
         password: passwordInput
     }
     console.log(newUser)
-    //Store new user
+
+
+    //Armazenar dados de novo usuário
     let UsersListBack = JSON.parse(localStorage.getItem("usersList"));
     UsersListBack.push(newUser);
     localStorage.setItem("usersList", JSON.stringify(UsersListBack));
-    //Site feedback
+
+
+    //Respostas do site
     console.log('Cadastro efetuado com sucesso!');
     signupMsgAlert.classList.remove('redAlert');
     signupMsgAlert.classList.add('greenAlert');
     signupMsgAlert.innerHTML = 'Cadastro efetuado com sucesso!';
-    //Text box clear
+
+
+    //Limpar caixas de texto
     let nameInputClear = document.querySelector('#name-Signup-Input');
     let nicknameInputClear = document.querySelector('#nick-Signup-Input');
     let emailInputClear = document.querySelector('#email-Signup-Input');
@@ -292,7 +307,7 @@ signupSubmitBtn.addEventListener("click", (evt) => {
     passConfirmInputClear.value = ""
 })
 
-//ONG signup system
+//Sistema de Cadastro de ONG
 new Cleave('#cnpj-OSignup-Input', {
     blocks: [2, 3, 3, 4, 2],
     delimiters: ['.', '.', '/', '-'],
@@ -306,7 +321,8 @@ new Cleave('#number-OSignup-Input', {
 });
 signupOngSubmitBtn.addEventListener("click", (evt) => {
     evt.preventDefault();
-    //ONG signup var
+
+    //Variáveis de cadastro de ONG
     let signupOngMsgAlert = document.querySelector('#signupOngAlert')
     let nameOngInput = document.querySelector('#name-OSignup-Input').value;
     let agentOngInput = document.querySelector('#agent-OSignup-Input').value;
@@ -316,7 +332,8 @@ signupOngSubmitBtn.addEventListener("click", (evt) => {
     let addressOngInput = document.querySelector('#address-OSignup-Input').value;
     let passwordOngInput = document.querySelector('#pass-OSignup-Input').value;
     let passConfirmOngInput = document.querySelector('#passConfirm-OSignup-Input').value;
-    //Signup Confirm
+
+    //Confirmação de cadastro de ONG
     if (nameOngInput == "" || agentOngInput == "" || emailOngInput == "" || numberOngInput == "" || cnpjOngInput == "" || addressOngInput == "" || passwordOngInput == "" || passConfirmOngInput == "") {
         console.log('Todos os campos devem ser preenchidos');
         signupOngMsgAlert.innerHTML = 'Todos os campos devem ser preenchidos';
@@ -324,7 +341,8 @@ signupOngSubmitBtn.addEventListener("click", (evt) => {
         signupOngMsgAlert.classList.add('redAlert');
         return;
     }
-    //Email
+
+    //Validações de email de ONG
     if (emailOngInput.length < 5) {
         console.log('Email deve conter mais de 5 letras');
         signupOngMsgAlert.innerHTML = 'Email deve conter mais de 5 caracteres';
@@ -338,7 +356,7 @@ signupOngSubmitBtn.addEventListener("click", (evt) => {
         signupOngMsgAlert.classList.add('redAlert');
         return;
     }
-    //Number
+    //Validações de número de ONG
     if (numberOngInput.length < 17) {
         console.log('O número de telefone deve conter 11 dígitos');
         signupOngMsgAlert.innerHTML = 'O número de telefone deve conter 11 dígitos';
@@ -346,7 +364,7 @@ signupOngSubmitBtn.addEventListener("click", (evt) => {
         signupOngMsgAlert.classList.add('redAlert');
         return;
     }
-    //Cnpj
+    //Validações CNPJ de ONG
     if (cnpjOngInput.length < 18) {
         console.log('O CNPJ deve conter 14 dígitos');
         signupOngMsgAlert.innerHTML = 'O CNPJ deve conter 14 dígitos';
@@ -354,7 +372,7 @@ signupOngSubmitBtn.addEventListener("click", (evt) => {
         signupOngMsgAlert.classList.add('redAlert');
         return;
     }
-    //Password
+    //Validações senha de ONG
     if (passwordOngInput.length < 6) {
         console.log('Senha deve conter no minimo 6 digitos');
         signupOngMsgAlert.innerHTML = 'Senha deve conter no minimo 6 digitos'
@@ -362,7 +380,7 @@ signupOngSubmitBtn.addEventListener("click", (evt) => {
         signupOngMsgAlert.classList.add('redAlert');
         return;
     }
-    //Password Confirm
+    //Validações confirmação de senha de ONG
     if (passConfirmOngInput != passwordOngInput) {
         console.log('Senhas digitadas não coincidem');
         signupOngMsgAlert.innerHTML = 'Senhas digitadas não coincidem';
@@ -381,18 +399,19 @@ signupOngSubmitBtn.addEventListener("click", (evt) => {
         accountType: "ONG"
     }
     console.log(newUser)
-    //Store new user
+
+    //Armazenar dados de ONG
     let UsersListBack = JSON.parse(localStorage.getItem("usersList"));
     UsersListBack.push(newUser);
     localStorage.setItem("usersList", JSON.stringify(UsersListBack));
 
-    //Site feedback
+    //Reações do site para ONG
     console.log('Cadastro efetuado com sucesso!');
     signupOngMsgAlert.classList.remove('redAlert', 'hide');
     signupOngMsgAlert.classList.add('greenAlert');
     signupOngMsgAlert.innerHTML = 'Cadastro efetuado com sucesso!';
 
-    //Text box clear
+    //Limpar caixas de texto de ONG
     let nameOngInputClear = document.querySelector('#name-OSignup-Input');
     let agentOngInputClear = document.querySelector('#agent-OSignup-Input');
     let emailOngInputClear = document.querySelector('#email-OSignup-Input');
