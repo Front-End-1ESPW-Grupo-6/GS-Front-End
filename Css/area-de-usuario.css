@@ -236,11 +236,12 @@ header {
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
+  z-index: 2;
 }
 
 .clock {
   align-items: center;
+  z-index: 2;
   border-radius: 3%;
   color: #fff;
   text-shadow: 3px 3px black;
@@ -252,6 +253,7 @@ header {
 }
 .date{
   font-size: 1em;
+  z-index: 2;
   color: #fff;
   text-shadow: 3px 3px black;
 }
