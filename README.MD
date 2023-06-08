@@ -8,7 +8,7 @@
 - Vinicius Buzato - 99125
 ___
 <div align=center>
-<img src="Imgs/Logo.png" widht="200" height="400">
+<img src="Imgs/FoodLink_white.png" widht="200" height="400">
 </div>
 
 ### Descrição do Projeto - Identificação do Problema
