@@ -154,7 +154,8 @@ if (listaUser == null) {
         accountType: "ONG"
     }
     let userList = []
-    userList.push(admin)
+    userList.push(admin1)
+    userList.push(admin2)
     localStorage.setItem("usersList", JSON.stringify(userList))
 } else {
     console.log('Lista de usuarios recuperada')
