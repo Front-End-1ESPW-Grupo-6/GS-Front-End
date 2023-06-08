@@ -11,6 +11,7 @@ ___
 <img src="Imgs/FoodLink_white.png" widht="200" height="400">
 </div>
 ___
+
 ### Descrição do Projeto - Identificação do Problema
 No fim de 2020, de acordo com dados do VIGISAN (Sistema de Vigilância Alimentar e Nutricional), foi constatado que 19,1 milhões de brasileiros/as conviviam com a fome. Tragicamente, em 2022, esse número alarmante aumentou para 33,1 milhões de pessoas sem ter o que comer. Diante dessa realidade preocupante, surge a proposta de um projeto inovador que visa combater a fome no Brasil por meio da aplicação de tecnologia, inovação e IA generativa.
 
