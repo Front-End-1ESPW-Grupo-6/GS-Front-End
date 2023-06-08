@@ -10,6 +10,7 @@ ___
 <div align=center>
 <img src="Imgs/FoodLink_white.png" widht="200" height="400">
 </div>
+
 ___
 
 ### Descrição do Projeto - Identificação do Problema
